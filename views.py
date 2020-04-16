@@ -19,10 +19,10 @@ nav = [
         'title': 'Portfolio',
         'path': '/portfolio',
     },
-    # {
-    #     'title': 'My GitHub Repos',
-    #     'path': '/github',
-    # },
+    {
+        'title': 'GitHub',
+        'path': '/github',
+    },
 ]
 
 def index(request):
@@ -59,6 +59,20 @@ def portfolio(request):
         'nav': nav,
     }
     return render(request, 'portfolio.html', context)
+
+def github_api(request):
+    '''Get my github repos'''
+    response = requests.get('https://api.github.com/users/groovybanana/repos')
+    repos = response.json()
+    context = {
+        'github_repos': repos,
+        'page_title': 'GitHub',
+        'nav': nav,
+    }
+    return render(request, 'github.html', context)
+
+
+
 
 # def github_api_example(request):
 #     # We can also combine Django with APIs

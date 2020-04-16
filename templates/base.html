@@ -19,44 +19,22 @@
   <div class="row">
     <div class="col">
               <ul class="nav nav-pills">
-                <li class="nav-item pill-1">
+                <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="/">Home</a>
                 </li>
 
                 {% for item in nav %}
-                <li class="nav-item pill-2">
+                <li class="nav-item">
                   <a class="nav-link" data-toggle="tab" href="{{ item.path }}">{{ item.title }}</a>
                 </li>
                 {% endfor %}
               </ul>
-
-
-                <!-- <li class="nav-item pill-2">
-                    <a class="nav-link" data-toggle="tab" href="/about.html">About</a>
-                </li>
-                <li class="nav-item pill-3">
-                  <a class="nav-link" data-toggle="tab" href="./blog.html">Blog</a>
-                </li>
-                <li class="nav-item pill-4">
-                  <a class="nav-link" data-toggle="tab" href="./portfolio.html">Portfolio</a>
-                </li>
-                <li class="nav-item pill-5">
-                  <a class="nav-link" data-toggle="tab" href="./contact.html">Contact</a>
-                </li> -->
-
-<!-- 
-              <ul class="navbar-nav mr-auto">
-                {% for item in nav %}
-                <li class="nav-item{% if item.title == page_title %} active{% endif %}">
-                  <a class="nav-link"  href="{{ item.path }}">{{ item.title }}{% if item.title == page_title %} <span class="sr-only">(current)</span>{% endif %}</a>
-                </li>
-                {% endfor %} -->
         
 <!-- end navigation-->
-
+<div class="content">
 {% block content %}
 {% endblock content %}
-
+</div>
 <!-- begin static image on right of page-->
 <div class="col">
   <div class="image">
@@ -66,7 +44,7 @@
 </div>
 </div>
 <div class="row">
-  <div class="col-2"><span class="copyright">Copyright {{year}}</span>
+  <div class="col-2"><span class="copyright">Copyright  {% now "Y" %}</span>
   </div>
 </div>
 </body>
