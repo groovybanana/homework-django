@@ -19,13 +19,9 @@
   <div class="row">
     <div class="col">
               <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="/">Home</a>
-                </li>
-
                 {% for item in nav %}
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="{{ item.path }}">{{ item.title }}</a>
+                  <a class="nav-link {% if item.title in page_title %} active{% endif %}" data-toggle="tab" href="{{ item.path }}">{{ item.title }}</a>
                 </li>
                 {% endfor %}
               </ul>

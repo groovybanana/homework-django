@@ -4,23 +4,33 @@ from django.shortcuts import render
 
 nav = [
     {
+        'title': 'Home',
+        'path': '/',
+        'active': 'active',
+    },
+    {
         'title': 'About',
         'path': '/about',
+        'active': 'active',
     },
     {
         'title': 'Blog',
         'path': '/blog',
+        'active': 'active',
     },
     {
         'title': 'Contact',
         'path': '/contact',
+        'active': 'active',
     },
     {
         'title': 'Portfolio',
         'path': '/portfolio',
+        'active': 'active',
     },
     {
         'title': 'GitHub',
+        'active': 'active',
         'path': '/github',
     },
 ]

@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<h1>My github repos</h1>
+<h1>My GitHub repos</h1>
   <ul>
   {% for repo in github_repos %}
       <li class="repo"><a href="{{ repo.html_url }}">{{ repo.name }}</a></li>
