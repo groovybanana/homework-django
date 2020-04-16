@@ -6,31 +6,25 @@ nav = [
     {
         'title': 'Home',
         'path': '/',
-        'active': 'active',
     },
     {
         'title': 'About',
         'path': '/about',
-        'active': 'active',
     },
     {
         'title': 'Blog',
         'path': '/blog',
-        'active': 'active',
     },
     {
         'title': 'Contact',
         'path': '/contact',
-        'active': 'active',
     },
     {
         'title': 'Portfolio',
         'path': '/portfolio',
-        'active': 'active',
     },
     {
         'title': 'GitHub',
-        'active': 'active',
         'path': '/github',
     },
 ]
@@ -80,32 +74,3 @@ def github_api(request):
         'nav': nav,
     }
     return render(request, 'github.html', context)
-
-
-
-
-# def github_api_example(request):
-#     # We can also combine Django with APIs
-#     response = requests.get('https://api.github.com/users/kickstartcoding/repos')
-#     repos = response.json()
-#     context = {
-#         'github_repos': repos,
-#     }
-#     return render(request, 'github.html', context)
-
-    # return HttpResponse('''
-    #     <h1>Welcome to my home page!</h1>
-    #     <a href="/about-me">About me</a> <br />
-    #     <a href="/github-api-example">See my GitHub contributions</a> <br />
-    # ''')
-
-
-# def about_me(request):
-#     # Django comes with a "shortcut" function called "render", that
-#     # lets us read in HTML template files in separate directories to
-#     # keep our code better organized.
-#     context = {
-#         'name': 'Ash Ketchum',
-#         'pokemon': 'Pikachu',
-#     }
-#     return render(request, 'about_me.html', context)
