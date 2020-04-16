@@ -48,7 +48,7 @@ def blog(request):
 
 def contact(request):
     context = {
-        'page_title': 'Conact Me',
+        'page_title': 'Contact Me',
         'nav': nav,
     }
     return render(request, 'contact.html', context)
